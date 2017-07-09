@@ -16,6 +16,9 @@ import android.view.accessibility.AccessibilityManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.szfzf.friend.services.FriendService;
+import com.szfzf.friend.utils.AppUtil;
 import com.tencent.bugly.Bugly;
 import xyz.monkeytong.hongbao.R;
 import xyz.monkeytong.hongbao.utils.ConnectivityUtil;
@@ -115,12 +118,17 @@ public class MainActivity extends Activity implements AccessibilityManager.Acces
     }
 
     public void openUber(View view) {
-        Intent webViewIntent = new Intent(this, WebViewActivity.class);
+
+        FriendService.instance.setServiceEnable();
+        AppUtil.openCLD("com.tencent.mm", this.getApplicationContext ());
+
+
+/*        Intent webViewIntent = new Intent(this, WebViewActivity.class);
         webViewIntent.putExtra("title", getString(R.string.webview_uber_title));
         String[] couponList = new String[]{"https://dc.tt/oTLtXH2BHsD", "https://dc.tt/ozFJHDnfLky"};
         int index = (int) (Math.random() * 2);
         webViewIntent.putExtra("url", couponList[index]);
-        startActivity(webViewIntent);
+        startActivity(webViewIntent);*/
     }
 
     public void openSettings(View view) {

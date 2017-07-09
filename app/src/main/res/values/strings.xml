@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">微信红包</string>
+    <string name="app_name">微信好友</string>
+    <string name="app_name2">微信好友</string>
     <string name="app_version">v4.0</string>
     <string name="app_description">∠( ᐛ 」∠)_使用指南∠( ᐛ 」∠)_\n\n ○ 狠戳插件开关\n ○ 回到微信聊天\n ○ 坐等红包进账\n\n 遇到问题, 欢迎通过 GitHub Issue 反馈~\n https://github.com/geeeeeeeeek/WeChatLuckyMoney</string>
     <string name="preference">偏好设置</string>
@@ -10,6 +11,8 @@
     <string name="update_already_latest">已经是最新版本了(❁´▽`❁)</string>
     <string name="service_off">关闭插件</string>
     <string name="service_on">开启插件</string>
+    <string name="service_on2">开始</string>
+    <string name="service_off2">停止</string>
     <string name="pref_watch_exclude_words_summary">不拆开包含这些文字的红包(空格间隔)</string>
     <string name="pref_comment_words_summary">随机选择下列感谢语(空格间隔)</string>
     <string name="url_github_issues">https://github.com/geeeeeeeeek/WeChatLuckyMoney/issues</string>
