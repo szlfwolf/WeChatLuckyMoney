@@ -81,7 +81,12 @@ public class FriendService extends AccessibilityService implements SharedPrefere
             case 4://进入搜索朋友
                 FillSearchFriendBar(event.getEventType(),nodeInfo);
                 break;
-
+            case 5://搜索朋友
+                SearchFriendBar(event.getEventType(),nodeInfo);
+                break;
+            case 6:
+                AddFriend(event.getEventType(),nodeInfo);
+                break;
             default:
                 break;
         }
@@ -167,20 +172,63 @@ public class FriendService extends AccessibilityService implements SharedPrefere
         }
     }
 
+
     private void FillSearchFriendBar(int type,AccessibilityNodeInfo nodeInfo) {
         if(type == AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED){
-            //判断当前是否是主页的签到页
-            List<AccessibilityNodeInfo> nodeList = nodeInfo.findAccessibilityNodeInfosByText("?");
-            if(!nodeList.isEmpty()){
-                AccessibilityNodeInfo nodeToInput = nodeList.get(0).getParent().getChild(1);
-                Bundle arguments = new Bundle();
-                arguments.putCharSequence(AccessibilityNodeInfo
-                        .ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE, "13511112222");
-                nodeToInput.performAction(AccessibilityNodeInfo.ACTION_SET_TEXT, arguments);
-                index = 5;
-                System.out.println("点击进入【添加朋友】详情3");
+            try{
+                //List<AccessibilityNodeInfo> nodeList = nodeInfo.findAccessibilityNodeInfosByText("搜索");
+
+                boolean ret = exec("input tap 280 150 \n");
+                if(ret) {
+                    ret = exec("input text '13511112222' \n");
+                    if (ret){
+                        index = 5;
+                        System.out.println("点击进入【添加朋友】详情3");
+                    }
+                }
+            }
+            catch (Exception ex){
+                Log.e(TAG, "FillSearchFriendBar: ",ex );
             }
 
+//           index = ret?3:1;
+        }
+
+    }
+
+
+    private void SearchFriendBar(int type,AccessibilityNodeInfo nodeInfo) {
+        if(type == AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED){
+            try{
+                //List<AccessibilityNodeInfo> nodeList = nodeInfo.findAccessibilityNodeInfosByText("搜索");
+
+                boolean ret = exec("input tap 250 300 \n");
+                if(ret) {
+
+                        index = 6;
+                        System.out.println("进入【朋友】详情");
+
+                }
+            }
+            catch (Exception ex){
+                Log.e(TAG, "SearchFriendBar: ",ex );
+            }
+
+//           index = ret?3:1;
+        }
+
+    }
+
+    private void AddFriend(int type,AccessibilityNodeInfo nodeInfo) {
+        if(type == AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED){
+            //判断当前是否是主页的签到页
+            List<AccessibilityNodeInfo> nodeList = nodeInfo.findAccessibilityNodeInfosByText("添加到通讯录");
+            if(!nodeList.isEmpty()){
+                boolean ret = click( "添加到通讯录");
+                System.out.println("---->"+ret);
+                index = 7;
+                System.out.println("点击进入【发送添加朋友信息ＡｄｄＦｒｉｅｎ】");
+            }
 //           index = ret?3:1;
         }
 

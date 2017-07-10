@@ -111,10 +111,10 @@ public class MainActivity extends Activity implements AccessibilityManager.Acces
     }
 
     public void openGitHub(View view) {
-        Intent webViewIntent = new Intent(this, WebViewActivity.class);
+/*        Intent webViewIntent = new Intent(this, WebViewActivity.class);
         webViewIntent.putExtra("title", getString(R.string.webview_github_title));
         webViewIntent.putExtra("url", "https://github.com/geeeeeeeeek/WeChatLuckyMoney");
-        startActivity(webViewIntent);
+        startActivity(webViewIntent);*/
     }
 
     public void openUber(View view) {
