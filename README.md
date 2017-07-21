@@ -1,4 +1,33 @@
-# 微信红包
+# 微信助手
+
+## 自动加好友
+
+营销利器，谁用谁知道。
+
+### 特性
+
+  - **资源统一分配**
+
+    还在手工分配业务员电话号码加微信？轻松一点，每日资料自动下发，自动添加好友，工作量从有到无。
+
+  - **客户资料保密**
+
+    还在担心业务员带着客户资料自立门户？业务员只负责推广业务，客户资料安全放心。
+
+  - **聊天记录全监控**
+
+    不知道业务员工作情况？监控分析聊天记录，提炼最佳实践，打造特种兵业务战队。
+
+  - **大数据**
+
+    还要啥业务员？智能分析业务场景，免费全勤无休智能业务员闪亮登场。
+
+  - **私人定制**
+
+    更多功能，请联系开发
+
+
+## 微信红包
 
 [![Gitter](https://badges.gitter.im/geeeeeeeeek/WeChatLuckyMoney.svg)](https://gitter.im/geeeeeeeeek/WeChatLuckyMoney?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge) [![Build Status](https://travis-ci.org/geeeeeeeeek/WeChatLuckyMoney.svg?branch=stable)](https://travis-ci.org/geeeeeeeeek/WeChatLuckyMoney)  [![Docs](https://img.shields.io/badge/Docs-English-blue.svg)](https://github.com/geeeeeeeeek/WeChatLuckyMoney/blob/stable/README_EN.md)
 

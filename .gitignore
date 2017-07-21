@@ -1,10 +1,7 @@
-*.imi
-.gradle
+# ignore in all folder
+.idea/ 
+.gradle/
+
+# ingore in current folder
+/build/
 /local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-/captures
-/.idea/dictionaries
-/monkeytong.jks
